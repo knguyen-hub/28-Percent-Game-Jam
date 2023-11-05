@@ -14,3 +14,5 @@ func _process(delta):
 	else:
 		_animated_sprite.play("idle")
 #hellooo :)) 
+
+#PLEASE WORK t-t
