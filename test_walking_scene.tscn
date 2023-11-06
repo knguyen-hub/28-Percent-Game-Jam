@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bikhgv2xo33gf"]
+[gd_scene load_steps=16 format=3 uid="uid://bikhgv2xo33gf"]
 
 [ext_resource type="Script" path="res://Character.gd" id="1_yvj01"]
 [ext_resource type="Texture2D" uid="uid://m7inr3f30x3g" path="res://test_walking_down/walking_down_frames_0001.png" id="2_m0a7j"]
@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://3lgdquv38wq" path="res://test_walking_sideways/sideways_walking_combined_0002.png" id="6_lhlid"]
 [ext_resource type="Texture2D" uid="uid://bjxo2snk8j8ml" path="res://test_walking_sideways/sideways_walking_combined_0003.png" id="7_mkcd4"]
 [ext_resource type="Texture2D" uid="uid://byprf8fovkhor" path="res://test_walking_sideways/sideways_walking_combined_0004.png" id="8_mxdc4"]
+[ext_resource type="Texture2D" uid="uid://chfc3w6q7h0qr" path="res://walking_up_frames/walking_up_0001.png" id="10_fy6ps"]
+[ext_resource type="Texture2D" uid="uid://dew3ifpl0dc4u" path="res://walking_up_frames/walking_up_0002.png" id="11_ge3qt"]
+[ext_resource type="Texture2D" uid="uid://bxkkwbmn540u5" path="res://walking_up_frames/walking_up_0003.png" id="12_ihmun"]
+[ext_resource type="Texture2D" uid="uid://bnh5h2abx7ry0" path="res://walking_up_frames/walking_up_0004.png" id="13_6kvep"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yp0et"]
 animations = [{
@@ -27,7 +31,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"down",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -35,7 +39,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -52,7 +56,24 @@ animations = [{
 }],
 "loop": true,
 "name": &"sideways",
-"speed": 5.0
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_fy6ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ge3qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ihmun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6kvep")
+}],
+"loop": true,
+"name": &"up",
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f8suf"]
@@ -61,7 +82,7 @@ size = Vector2(199, 301)
 [node name="Node2D" type="Node2D"]
 
 [node name="Character" type="CharacterBody2D" parent="."]
-position = Vector2(334, 315)
+position = Vector2(5, 138)
 script = ExtResource("1_yvj01")
 metadata/_edit_group_ = true
 
@@ -69,7 +90,7 @@ metadata/_edit_group_ = true
 position = Vector2(119.5, 121.5)
 scale = Vector2(13.2031, 13.2031)
 sprite_frames = SubResource("SpriteFrames_yp0et")
-animation = &"idle"
+animation = &"up"
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
