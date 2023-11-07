@@ -77,14 +77,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f8suf"]
-size = Vector2(199, 301)
+size = Vector2(199, 85)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Character" type="CharacterBody2D" parent="."]
+visible = false
 position = Vector2(5, 138)
 script = ExtResource("1_yvj01")
-metadata/_edit_group_ = true
 
 [node name="TestCharacterSprite" type="AnimatedSprite2D" parent="Character"]
 position = Vector2(119.5, 121.5)
@@ -94,6 +94,6 @@ animation = &"up"
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
-position = Vector2(128.5, 58.5)
+position = Vector2(128.5, 185.5)
 shape = SubResource("RectangleShape2D_f8suf")
 metadata/_edit_group_ = true
