@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvvld7at8vl8w"]
+[gd_scene load_steps=10 format=3 uid="uid://cgxutpbuime0a"]
 
 [ext_resource type="Script" path="res://test_dating_app_scene.gd" id="1_vuqrl"]
 [ext_resource type="Texture2D" uid="uid://crupj5knys1em" path="res://dating_app_not_real.png" id="1_xrp6r"]
-[ext_resource type="PackedScene" uid="uid://dxukphd7p3mnj" path="res://character.tscn" id="2_bjtcp"]
+[ext_resource type="PackedScene" path="res://character.tscn" id="2_bjtcp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bn5oc"]
 size = Vector2(324, 188)
