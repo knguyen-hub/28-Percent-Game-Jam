@@ -82,8 +82,7 @@ size = Vector2(199, 85)
 [node name="Node2D" type="Node2D"]
 
 [node name="Character" type="CharacterBody2D" parent="."]
-visible = false
-position = Vector2(5, 138)
+position = Vector2(5, 0)
 script = ExtResource("1_yvj01")
 
 [node name="TestCharacterSprite" type="AnimatedSprite2D" parent="Character"]
