@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://bnq7yvgrwuxaj"]
+
+[ext_resource type="Texture2D" uid="uid://b1vbxb0e8gpk1" path="res://RPG Players Bedroom.png" id="1_t4uvd"]
+[ext_resource type="PackedScene" path="res://character.tscn" id="2_sifoe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0o48l"]
+size = Vector2(47, 350)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mbnx"]
+size = Vector2(49, 238)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xeh4r"]
+size = Vector2(611.5, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3326"]
+size = Vector2(620, 149)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b15w3"]
+size = Vector2(49, 470.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fcs8"]
+size = Vector2(114.5, 256.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qh6we"]
+size = Vector2(124.5, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gaeh"]
+size = Vector2(49.5, 179)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vcee"]
+size = Vector2(106, 167)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 235.0
+offset_right = 883.0
+offset_bottom = 648.0
+texture = ExtResource("1_t4uvd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Wall 1" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(252.5, 175)
+shape = SubResource("RectangleShape2D_0o48l")
+
+[node name="Wall 2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(254.5, 533)
+shape = SubResource("RectangleShape2D_8mbnx")
+
+[node name="Wall 3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(579.25, 629)
+shape = SubResource("RectangleShape2D_xeh4r")
+
+[node name="Wall 4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(577, 71.5)
+shape = SubResource("RectangleShape2D_q3326")
+
+[node name="Wall 5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(863.5, 374.75)
+shape = SubResource("RectangleShape2D_b15w3")
+
+[node name="Table" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(792.75, 487.875)
+shape = SubResource("RectangleShape2D_8fcs8")
+
+[node name="Chair" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(679.25, 504)
+shape = SubResource("RectangleShape2D_qh6we")
+
+[node name="Chair Backing" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(627, 463)
+shape = SubResource("RectangleShape2D_4gaeh")
+
+[node name="Plant" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(325, 536.5)
+shape = SubResource("RectangleShape2D_1vcee")
+
+[node name="Character" parent="." instance=ExtResource("2_sifoe")]
+position = Vector2(501, 539)
+scale = Vector2(2, 2)
