@@ -1,6 +1,7 @@
 extends Node
 
 
+<<<<<<< HEAD
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -20,3 +21,5 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		DialogueManager.show_example_dialogue_balloon(load("res://dating_app_dialogue/alex_dialogue.dialogue"), "alex_start")
 		return
+=======
+>>>>>>> 1f0b043ab6d72aa5df881eec59dd2a604dcba9ea

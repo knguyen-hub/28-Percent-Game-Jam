@@ -1,6 +1,63 @@
+<<<<<<< HEAD
 [gd_scene load_steps=9 format=3 uid="uid://bl03kwt0stq5w"]
+=======
+[gd_scene load_steps=19 format=3 uid="uid://ciwxrt50gnx3n"]
+>>>>>>> 1f0b043ab6d72aa5df881eec59dd2a604dcba9ea
 
+[ext_resource type="Texture2D" uid="uid://d2urtxfc205v5" path="res://cafe-wiithout-alex.png" id="1_1p3ar"]
 [ext_resource type="Texture2D" uid="uid://cbug0nxy5nebc" path="res://Cafe.png" id="1_tw0sg"]
+[ext_resource type="Texture2D" uid="uid://do5e1y8cpen1f" path="res://playerdialogue.png" id="2_rel0i"]
+[ext_resource type="Script" path="res://Playerdialogue.gd" id="3_2ksmj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wec3"]
+atlas = ExtResource("1_1p3ar")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bt7h"]
+atlas = ExtResource("1_1p3ar")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwh7g"]
+atlas = ExtResource("1_1p3ar")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2c1jk"]
+atlas = ExtResource("1_1p3ar")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2qgb"]
+atlas = ExtResource("1_1p3ar")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyywq"]
+atlas = ExtResource("1_1p3ar")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sk1yj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wec3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bt7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwh7g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2c1jk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2qgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyywq")
+}],
+"loop": true,
+"name": &"default_withoutalex",
+"speed": 1.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aseuj"]
 atlas = ExtResource("1_tw0sg")
@@ -48,14 +105,28 @@ animations = [{
 "texture": SubResource("AtlasTexture_5jp6p")
 }],
 "loop": true,
-"name": &"default",
+"name": &"default_withalex",
 "speed": 1.0
 }]
 
 [node name="Cafe" type="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="without_alex" type="AnimatedSprite2D" parent="."]
+position = Vector2(595, 325)
+scale = Vector2(6.54, 6.48)
+sprite_frames = SubResource("SpriteFrames_sk1yj")
+animation = &"default_withoutalex"
+
+[node name="with alex" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(594, 323)
 scale = Vector2(6.5175, 6.485)
 sprite_frames = SubResource("SpriteFrames_2ixsk")
-frame_progress = 0.541018
+animation = &"default_withalex"
+
+[node name="Playerdialogue" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(583, 285)
+scale = Vector2(6.5325, 6.975)
+texture = ExtResource("2_rel0i")
+script = ExtResource("3_2ksmj")
