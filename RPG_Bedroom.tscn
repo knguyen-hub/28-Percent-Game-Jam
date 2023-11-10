@@ -3,7 +3,10 @@
 [ext_resource type="Script" path="res://RPG_Bedroom.gd" id="1_qnyuw"]
 [ext_resource type="Texture2D" uid="uid://b1vbxb0e8gpk1" path="res://RPG Players Bedroom.png" id="1_t4uvd"]
 [ext_resource type="PackedScene" uid="uid://dxukphd7p3mnj" path="res://character.tscn" id="2_sifoe"]
+<<<<<<< HEAD
+=======
 [ext_resource type="PackedScene" uid="uid://bn3h47r5l5hxw" path="res://Interaction/Interaction Area/interaction_area.tscn" id="4_cbbsd"]
+>>>>>>> 1f0b043ab6d72aa5df881eec59dd2a604dcba9ea
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0o48l"]
 size = Vector2(30, 300)
@@ -45,6 +48,7 @@ offset_left = 235.0
 offset_right = 883.0
 offset_bottom = 648.0
 texture = ExtResource("1_t4uvd")
+metadata/_edit_use_anchors_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

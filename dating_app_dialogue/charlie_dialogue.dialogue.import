@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c7i3us67h22c4"
+path="res://.godot/imported/charlie_dialogue.dialogue-d61904190bec445864c7106687e9c5e2.tres"
+
+[deps]
+
+source_file="res://dating_app_dialogue/charlie_dialogue.dialogue"
+dest_files=["res://.godot/imported/charlie_dialogue.dialogue-d61904190bec445864c7106687e9c5e2.tres"]
+
+[params]
+
+defaults=true

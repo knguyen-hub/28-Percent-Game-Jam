@@ -1,7 +1,6 @@
-extends Node
+extends Area2D
 
 
-<<<<<<< HEAD
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,14 +11,12 @@ func _process(delta):
 	pass
 
 
-func _on_new_left_barrier_body_entered(body):
+func _on_body_entered(body):
 	if body.is_in_group("CharacterGroup"):
-		get_tree().change_scene_to_file("res://Jaime_dating_app.tscn")
+		get_tree().change_scene_to_file("res://Alex_dating_app.tscn") # Replace with function body.
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		DialogueManager.show_example_dialogue_balloon(load("res://dating_app_dialogue/alex_dialogue.dialogue"), "alex_start")
+		DialogueManager.show_example_dialogue_balloon(load("res://dating_app_dialogue/charlie_dialogue.dialogue"), "charlie_start")
 		return
-=======
->>>>>>> 1f0b043ab6d72aa5df881eec59dd2a604dcba9ea

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cw1qchhj50hfb"
+path="res://.godot/imported/post_app_dialogue.dialogue-cba26d3ceaa4cf87b7ef8bb9e47a264b.tres"
+
+[deps]
+
+source_file="res://dating_app_dialogue/post_app_dialogue.dialogue"
+dest_files=["res://.godot/imported/post_app_dialogue.dialogue-cba26d3ceaa4cf87b7ef8bb9e47a264b.tres"]
+
+[params]
+
+defaults=true

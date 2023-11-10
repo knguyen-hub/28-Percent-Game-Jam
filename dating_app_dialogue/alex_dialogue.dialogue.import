@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://b1horkp7br7y"
+path="res://.godot/imported/alex_dialogue.dialogue-a8629efc84930730e000e3dae6221ba3.tres"
+
+[deps]
+
+source_file="res://dating_app_dialogue/alex_dialogue.dialogue"
+dest_files=["res://.godot/imported/alex_dialogue.dialogue-a8629efc84930730e000e3dae6221ba3.tres"]
+
+[params]
+
+defaults=true

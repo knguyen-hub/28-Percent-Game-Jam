@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bxwemax1a6n4i"
+path="res://.godot/imported/jaime_dialogue.dialogue-e6fe736e5384b2e098c87e30303c101b.tres"
+
+[deps]
+
+source_file="res://dating_app_dialogue/jaime_dialogue.dialogue"
+dest_files=["res://.godot/imported/jaime_dialogue.dialogue-e6fe736e5384b2e098c87e30303c101b.tres"]
+
+[params]
+
+defaults=true

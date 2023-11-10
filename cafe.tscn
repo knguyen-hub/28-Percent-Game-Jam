@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+[gd_scene load_steps=9 format=3 uid="uid://bl03kwt0stq5w"]
+=======
 [gd_scene load_steps=19 format=3 uid="uid://ciwxrt50gnx3n"]
+>>>>>>> 1f0b043ab6d72aa5df881eec59dd2a604dcba9ea
 
 [ext_resource type="Texture2D" uid="uid://d2urtxfc205v5" path="res://cafe-wiithout-alex.png" id="1_1p3ar"]
 [ext_resource type="Texture2D" uid="uid://cbug0nxy5nebc" path="res://Cafe.png" id="1_tw0sg"]
