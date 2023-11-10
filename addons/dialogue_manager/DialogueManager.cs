@@ -123,9 +123,15 @@ namespace DialogueManagerRuntime
     }
 
 
+<<<<<<< HEAD
     public static void ShowExampleDialogueBalloon(Resource dialogueResource, string key = "", Array<Variant>? extraGameStates = null)
     {
       Instance.Call("show_example_dialogue_balloon", dialogueResource, key, extraGameStates ?? new Array<Variant>());
+=======
+    public static CanvasLayer ShowExampleDialogueBalloon(Resource dialogueResource, string key = "", Array<Variant>? extraGameStates = null)
+    {
+      return (CanvasLayer)Instance.Call("show_example_dialogue_balloon", dialogueResource, key, extraGameStates ?? new Array<Variant>());
+>>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
     }
 
 

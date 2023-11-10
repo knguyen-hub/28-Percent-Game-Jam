@@ -77,10 +77,20 @@ func type_out() -> void:
 	text = dialogue_line.text
 	visible_characters = 0
 	visible_ratio = 0
+<<<<<<< HEAD
 	self.is_typing = true
 	_waiting_seconds = 0
 
 	# Text isn't calculated until the next frame
+=======
+	_waiting_seconds = 0
+	_last_wait_index = -1
+	_last_mutation_index = -1
+
+	self.is_typing = true
+
+	# Allow typing listeners a chance to connect
+>>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 	await get_tree().process_frame
 
 	if get_total_character_count() == 0:
@@ -176,7 +186,12 @@ func _should_auto_pause() -> bool:
 			return false
 
 	# Ignore two non-"." characters next to each other
+<<<<<<< HEAD
 	if visible_characters > 1 and parsed_text[visible_characters - 1] in pause_at_characters.replace(".", "").split():
+=======
+	var other_pause_characters: PackedStringArray = pause_at_characters.replace(".", "").split()
+	if visible_characters > 1 and parsed_text[visible_characters - 1] in other_pause_characters and parsed_text[visible_characters] in other_pause_characters:
+>>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 		return false
 
 	return parsed_text[visible_characters - 1] in pause_at_characters.split()

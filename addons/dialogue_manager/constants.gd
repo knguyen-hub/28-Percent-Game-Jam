@@ -172,6 +172,10 @@ const ERR_UNEXPECTED_NUMBER = 131
 const ERR_UNEXPECTED_VARIABLE = 132
 const ERR_INVALID_INDEX = 133
 const ERR_UNEXPECTED_ASSIGNMENT = 134
+<<<<<<< HEAD
+=======
+const ERR_UNKNOWN_USING = 135
+>>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 
 
 ## Get the error message
@@ -247,6 +251,11 @@ static func get_error_message(error: int) -> String:
 			return translate("errors.invalid_index")
 		ERR_UNEXPECTED_ASSIGNMENT:
 			return translate("errors.unexpected_assignment")
+<<<<<<< HEAD
+=======
+		ERR_UNKNOWN_USING:
+			return translate("errors.unknown_using")
+>>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 
 	return translate("errors.unknown")
 
