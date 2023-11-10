@@ -108,16 +108,17 @@ animations = [{
 [node name="Cafe" type="Node2D"]
 
 [node name="without alex" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(596.5, 325)
-scale = Vector2(6.51, 6.48)
+position = Vector2(595, 325)
+scale = Vector2(6.54, 6.48)
 sprite_frames = SubResource("SpriteFrames_sk1yj")
 
 [node name="with alex" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(594, 323)
 scale = Vector2(6.5175, 6.485)
 sprite_frames = SubResource("SpriteFrames_2ixsk")
-frame_progress = 0.541018
+frame = 1
+frame_progress = 0.335059
 
 [node name="Playerdialogue" type="Sprite2D" parent="."]
 visible = false
