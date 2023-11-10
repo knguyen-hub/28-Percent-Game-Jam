@@ -48,7 +48,7 @@ interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://test/visual_novel/test.dialogue", "res://Dialogue/main.dialogue")
+locale/translations_pot_files=PackedStringArray("res://test/visual_novel/test.dialogue", "res://Dialogue/main.dialogue", "res://Dialogue/mirror_scene.dialogue")
 
 [layer_names]
 
