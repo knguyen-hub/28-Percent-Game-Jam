@@ -1,11 +1,12 @@
 extends Sprite2D
 
-
+@onready var _animated_background = $without_alex
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
-
+func _process(delta):
+	_animated_background.play("default_withoutalex") 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
