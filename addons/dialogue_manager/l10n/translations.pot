@@ -221,12 +221,9 @@ msgstr ""
 msgid "errors.duplicate_import"
 msgstr ""
 
-<<<<<<< HEAD
-=======
 msgid "errors.unknown_using"
 msgstr ""
 
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 msgid "errors.empty_title"
 msgstr ""
 
@@ -413,11 +410,8 @@ msgstr ""
 msgid "runtime.unknown_operator"
 msgstr ""
 
-<<<<<<< HEAD
-=======
 msgid "runtime.unknown_autoload"
 msgstr ""
 
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 msgid "runtime.something_went_wrong"
 msgstr ""

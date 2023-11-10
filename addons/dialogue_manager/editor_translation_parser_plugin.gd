@@ -20,11 +20,7 @@ func _parse_file(path: String, msgids: Array, msgids_context_plural: Array) -> v
 
 			known_keys.append(character_name)
 
-<<<<<<< HEAD
-			msgids_context_plural.append([character_name, "dialogue", ""])
-=======
 			msgids_context_plural.append([character_name.replace('"', '\\"'), "dialogue", ""])
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 
 	# Add all dialogue lines and responses
 	var dialogue: Dictionary = data.lines
@@ -37,15 +33,9 @@ func _parse_file(path: String, msgids: Array, msgids_context_plural: Array) -> v
 		known_keys.append(line.translation_key)
 
 		if line.translation_key == "" or line.translation_key == line.text:
-<<<<<<< HEAD
-			msgids_context_plural.append([line.text, "", ""])
-		else:
-			msgids_context_plural.append([line.text, line.translation_key, ""])
-=======
 			msgids_context_plural.append([line.text.replace('"', '\\"'), "", ""])
 		else:
 			msgids_context_plural.append([line.text.replace('"', '\\"'), line.translation_key.replace('"', '\\"'), ""])
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 
 
 func _get_recognized_extensions() -> PackedStringArray:

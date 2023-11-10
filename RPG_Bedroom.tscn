@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bnq7yvgrwuxaj"]
+[gd_scene load_steps=16 format=3 uid="uid://bnq7yvgrwuxaj"]
 
 [ext_resource type="Script" path="res://RPG_Bedroom.gd" id="1_qnyuw"]
 [ext_resource type="Texture2D" uid="uid://b1vbxb0e8gpk1" path="res://RPG Players Bedroom.png" id="1_t4uvd"]
 [ext_resource type="PackedScene" uid="uid://dxukphd7p3mnj" path="res://character.tscn" id="2_sifoe"]
+[ext_resource type="PackedScene" uid="uid://bn3h47r5l5hxw" path="res://Interaction/Interaction Area/interaction_area.tscn" id="4_cbbsd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0o48l"]
 size = Vector2(30, 300)
@@ -29,10 +30,12 @@ size = Vector2(96, 245)
 size = Vector2(124.5, 87)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gaeh"]
-size = Vector2(24.75, 179)
+size = Vector2(24.75, 143.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vcee"]
 size = Vector2(106, 136)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0eyy3"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_qnyuw")
@@ -78,15 +81,23 @@ position = Vector2(684, 515)
 shape = SubResource("RectangleShape2D_qh6we")
 
 [node name="Chair Backing" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(639.375, 463)
+position = Vector2(639.375, 480.75)
 shape = SubResource("RectangleShape2D_4gaeh")
 
 [node name="Plant" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(325, 552)
 shape = SubResource("RectangleShape2D_1vcee")
 
-[node name="Character" parent="." instance=ExtResource("2_sifoe")]
+[node name="Character" parent="." groups=["player"] instance=ExtResource("2_sifoe")]
 position = Vector2(501, 539)
 scale = Vector2(2, 2)
+collision_layer = 2
+
+[node name="interaction_area" parent="." instance=ExtResource("4_cbbsd")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interaction_area"]
+position = Vector2(780, 396)
+scale = Vector2(10, 10)
+shape = SubResource("CircleShape2D_0eyy3")
 
 [connection signal="mouse_entered" from="TextureRect" to="." method="_on_texture_rect_mouse_entered"]

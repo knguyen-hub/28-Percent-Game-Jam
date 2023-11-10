@@ -5,11 +5,6 @@ class_name DialogueManagerParser extends Object
 
 const DialogueConstants = preload("../constants.gd")
 const DialogueSettings = preload("./settings.gd")
-<<<<<<< HEAD
-
-
-var IMPORT_REGEX: RegEx = RegEx.create_from_string("import \"(?<path>[^\"]+)\" as (?<prefix>[^\\!\\@\\#\\$\\%\\^\\&\\*\\(\\)\\-\\=\\+\\{\\}\\[\\]\\;\\:\\\"\\'\\,\\.\\<\\>\\?\\/\\s]+)")
-=======
 const ResolvedLineData = preload("./resolved_line_data.gd")
 const ResolvedTagData = preload("./resolved_tag_data.gd")
 const DialogueManagerParseResult = preload("./parse_result.gd")
@@ -17,7 +12,6 @@ const DialogueManagerParseResult = preload("./parse_result.gd")
 
 var IMPORT_REGEX: RegEx = RegEx.create_from_string("import \"(?<path>[^\"]+)\" as (?<prefix>[^\\!\\@\\#\\$\\%\\^\\&\\*\\(\\)\\-\\=\\+\\{\\}\\[\\]\\;\\:\\\"\\'\\,\\.\\<\\>\\?\\/\\s]+)")
 var USING_REGEX: RegEx = RegEx.create_from_string("using (?<state>.*)")
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 var VALID_TITLE_REGEX: RegEx = RegEx.create_from_string("^[^\\!\\@\\#\\$\\%\\^\\&\\*\\(\\)\\-\\=\\+\\{\\}\\[\\]\\;\\:\\\"\\'\\,\\.\\<\\>\\?\\/\\s]+$")
 var BEGINS_WITH_NUMBER_REGEX: RegEx = RegEx.create_from_string("^\\d")
 var TRANSLATION_REGEX: RegEx = RegEx.create_from_string("\\[ID:(?<tr>.*?)\\]")
@@ -28,11 +22,8 @@ var WRAPPED_CONDITION_REGEX: RegEx = RegEx.create_from_string("\\[if (?<conditio
 var REPLACEMENTS_REGEX: RegEx = RegEx.create_from_string("{{(.*?)}}")
 var GOTO_REGEX: RegEx = RegEx.create_from_string("=><? (?<jump_to_title>.*)")
 var INDENT_REGEX: RegEx = RegEx.create_from_string("^\\t+")
-<<<<<<< HEAD
-=======
 var INLINE_RANDOM_REGEX: RegEx = RegEx.create_from_string("\\[\\[(?<options>.*?)\\]\\]")
 var INLINE_CONDITIONALS_REGEX: RegEx = RegEx.create_from_string("\\[if (?<condition>.+?)\\](?<body>.*?)\\[\\/if\\]")
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 
 var TOKEN_DEFINITIONS: Dictionary = {
 	DialogueConstants.TOKEN_FUNCTION: RegEx.create_from_string("^[a-zA-Z_][a-zA-Z_0-9]*\\("),
@@ -66,10 +57,7 @@ var parent_stack: Array[String] = []
 
 var parsed_lines: Dictionary = {}
 var imported_paths: PackedStringArray = []
-<<<<<<< HEAD
-=======
 var using_states: PackedStringArray = []
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 var titles: Dictionary = {}
 var character_names: PackedStringArray = []
 var first_title: String = ""
@@ -110,12 +98,9 @@ func parse(text: String, path: String) -> Error:
 	# Parse all of the content
 	var known_translations = {}
 
-<<<<<<< HEAD
-=======
 	# Get list of known autoloads
 	var autoload_names: PackedStringArray = get_autoload_names()
 
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 	# Then parse all lines
 	for id in range(0, raw_lines.size()):
 		var raw_line: String = raw_lines[id]
@@ -146,12 +131,6 @@ func parse(text: String, path: String) -> Error:
 			line["translation_key"] = translation_key
 			raw_line = raw_line.replace("[ID:%s]" % translation_key, "")
 
-<<<<<<< HEAD
-		## Check for each kind of line
-
-		# Response
-		if is_response_line(raw_line):
-=======
 		# Check for each kind of line
 
 		# Start shortcuts
@@ -167,7 +146,6 @@ func parse(text: String, path: String) -> Error:
 
 		# Response
 		elif is_response_line(raw_line):
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 			parent_stack.append(str(id))
 			line["type"] = DialogueConstants.TYPE_RESPONSE
 
@@ -340,11 +318,7 @@ func parse(text: String, path: String) -> Error:
 
 			continue
 
-<<<<<<< HEAD
-		elif is_line_empty(raw_line):
-=======
 		elif is_line_empty(raw_line) or is_import_line(raw_line):
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 			continue
 
 		# Regular dialogue
@@ -472,10 +446,7 @@ func parse(text: String, path: String) -> Error:
 func get_data() -> DialogueManagerParseResult:
 	var data: DialogueManagerParseResult = DialogueManagerParseResult.new()
 	data.imported_paths = imported_paths
-<<<<<<< HEAD
-=======
 	data.using_states = using_states
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 	data.titles = titles
 	data.character_names = character_names
 	data.first_title = first_title
@@ -487,10 +458,7 @@ func get_data() -> DialogueManagerParseResult:
 func get_errors() -> Array[Dictionary]:
 	return errors
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 ## Prepare the parser by collecting all lines and titles
 func prepare(text: String, path: String, include_imported_titles_hashes: bool = true) -> void:
 	errors = []
@@ -921,8 +889,6 @@ func find_next_line_after_responses(line_number: int) -> String:
 	return DialogueConstants.ID_END_CONVERSATION
 
 
-<<<<<<< HEAD
-=======
 ## Get the names of any autoloads in the project
 func get_autoload_names() -> PackedStringArray:
 	var autoloads: PackedStringArray = []
@@ -935,7 +901,6 @@ func get_autoload_names() -> PackedStringArray:
 	return autoloads
 
 
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 ## Import content from another dialogue file or return an ERR
 func import_content(path: String, prefix: String, imported_line_map: Array[Dictionary], known_imports: Dictionary) -> Error:
 	if FileAccess.file_exists(path):
@@ -1193,10 +1158,6 @@ func extract_markers(line: String) -> ResolvedLineData:
 	var pauses: Dictionary = {}
 	var speeds: Dictionary = {}
 	var mutations: Array[Array] = []
-<<<<<<< HEAD
-	var conditions: Dictionary = {}
-=======
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 	var bbcodes: Array = []
 	var time = null
 
@@ -1206,11 +1167,7 @@ func extract_markers(line: String) -> ResolvedLineData:
 	var accumulaive_length_offset = 0
 	for position in bbcode_positions:
 		# Ignore our own markers
-<<<<<<< HEAD
-		if position.code in ["wait", "speed", "/speed", "do", "set", "next", "if", "/if"]:
-=======
 		if position.code in ["wait", "speed", "/speed", "do", "set", "next", "if", "else", "/if"]:
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 			continue
 
 		bbcodes.append({
@@ -1237,11 +1194,6 @@ func extract_markers(line: String) -> ResolvedLineData:
 		var args = {}
 		if code in ["do", "set"]:
 			args["value"] = extract_mutation("%s %s" % [code, raw_args])
-<<<<<<< HEAD
-		elif code == "if":
-			args["value"] = extract_condition(bbcode["bbcode"], true, 0)
-=======
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 		else:
 			# Could be something like:
 			# 	"=1.0"
@@ -1267,13 +1219,6 @@ func extract_markers(line: String) -> ResolvedLineData:
 				mutations.append([index, args.get("value")])
 			"next":
 				time = args.get("value") if args.has("value") else "0"
-<<<<<<< HEAD
-			"if":
-				conditions[index] = args.get("value")
-			"/if":
-				conditions[index] = null
-=======
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 
 		# Find any BB codes that are after this index and remove the length from their start
 		var length = bbcode.bbcode.length()
@@ -1294,10 +1239,6 @@ func extract_markers(line: String) -> ResolvedLineData:
 		pauses = pauses,
 		speeds = speeds,
 		mutations = mutations,
-<<<<<<< HEAD
-		conditions = conditions,
-=======
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 		time = time
 	})
 
@@ -1332,11 +1273,7 @@ func find_bbcode_positions_in_string(string: String, find_all: bool = true) -> A
 
 		if string[i] == "]":
 			open_brace_count -= 1
-<<<<<<< HEAD
-			if open_brace_count == 0:
-=======
 			if open_brace_count == 0 and not code in ["if", "else", "/if"]:
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 				positions.append({
 					bbcode = bbcode,
 					code = code,

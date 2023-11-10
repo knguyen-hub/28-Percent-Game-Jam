@@ -410,12 +410,8 @@ func apply_theme() -> void:
 		open_dialog.min_size = Vector2(600, 500) * scale
 		export_dialog.min_size = Vector2(600, 500) * scale
 		export_dialog.min_size = Vector2(600, 500) * scale
-<<<<<<< HEAD
-		settings_dialog.min_size = Vector2(600, 600) * scale
-=======
 		settings_dialog.min_size = Vector2(1000, 600) * scale
 		settings_dialog.max_size = Vector2(1000, 600) * scale
->>>>>>> 4c70209e7c807d464a8fa3eba4d264e8bc2c7ab9
 
 
 ### Helpers
