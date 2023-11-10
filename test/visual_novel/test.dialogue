@@ -1,0 +1,18 @@
+~ start
+
+You: "I hope he comes soon...Should I get worked up over how late he is?"
+#alex appears 
+
+Alex: "Hey! It's nice to meet you!"
+	You: Should I say something about how late he is? He doesn't seem remorseful at all...
+	- Stay silent 
+		You: I won't say anything. It's fine I guess. At least he seems decent.
+		You: "Nice to meet you too..uhh"
+		You: CRAP, what was his name again? J- something or A- something"
+	- Say something 
+		You: "Hey. I thought we agreed to meet an hour ago?"
+		Alex: "Oh, my bad. There was traffic."
+		You: "I see...Um well it's nice to meet you too...uhhhh"
+		You: CRAP, what was his name again?
+		
+=> END
