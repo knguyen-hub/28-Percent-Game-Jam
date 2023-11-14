@@ -4,7 +4,7 @@ extends Node2D
 @onready var player = get_tree().get_first_node_in_group("player")
 @onready var label = $Label
 
-const base_text = "[E] to "
+const base_text = "[F] to "
 
 var active_areas = []
 var can_interact = true
@@ -34,7 +34,7 @@ func _sort_by_distance_to_player(area1, area2):
 	return area1_to_player < area2_to_player
 
 func _input(event):
-	if event.is_action_pressed("interact") && can_interact:
+	if event.is_action_pressed("interaction") && can_interact:
 		if active_areas.size() > 0:
 			can_interact = false
 			label.hide()

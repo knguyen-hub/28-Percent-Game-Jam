@@ -7,4 +7,4 @@ func _ready():
 	
 
 func _on_pressed():
-	get_tree().change_scene_to_file("res://RPG_Bedroom.tscn")
+	get_tree().change_scene_to_file("res://players_bedroom.tscn")
